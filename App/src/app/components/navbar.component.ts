@@ -16,10 +16,17 @@ import { AuthenticationService } from 'src/app/security/authentication.service';
 export class NavbarComponent implements OnInit {
 
     private user: User;
+
+     //temp
+     title = 'App!!';
+
+
     constructor(private authenticationService: AuthenticationService) { }
 
     ngOnInit() {
         this.authenticationService.getUser().subscribe(user => this.user = user, err => this.user = null);
         store.currentUser$.subscribe(user => this.user = user);
+
+       
     }
 }
