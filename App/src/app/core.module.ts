@@ -16,6 +16,8 @@ import { SecurityService } from './security/services/security.service';
 import { HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
 import { AuthInterceptor } from './security/auth.interceptor';
 
+import { GuiModule } from './gui/gui.module';
+
 
 @NgModule({
   declarations: [],
@@ -36,7 +38,8 @@ import { AuthInterceptor } from './security/auth.interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    GuiModule
   ],
   exports: []
 })

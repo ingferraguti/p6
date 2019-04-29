@@ -19,6 +19,9 @@ import { CoreModule } from './core.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar.component';
 
+//GUI
+
+
 // DIRECTIVES
 import { MailValidator } from './directives/mail.validate.directive';
 

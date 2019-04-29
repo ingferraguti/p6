@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
+// HOME
+import { HomeComponent} from './pages/home/home.component';
+
 // SECURITY
 import { LoginComponent } from './pages/login/login.component';
 import { ManageUserEditComponent } from './security/manage-user/edit-user/manage-user-edit.component';
@@ -13,6 +17,7 @@ import { AuthGuard } from './security/auth.guard';
  */
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'  },
+  { path: 'home',  loadChildren: './pages/home/home.module#HomeModule' , canActivate: [AuthGuard] },
 
    // SECURITY
    { path: 'manage-users',  loadChildren: './security/manage-user/list-user/manage-user-list.module#ManageUserListModule', canActivate: [AuthGuard], data: ['ADMIN']},
