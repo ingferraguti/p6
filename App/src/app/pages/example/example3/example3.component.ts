@@ -6,7 +6,7 @@ import { Example2Component } from '../example2/example2.component';
   template: `<gui-table 
     [tableCssClass]="[]" 
     [heading]="tableheading" 
-    [data]="list"
+    [data]="itemService.items"
     [actions]="tableactions"
     >
     </gui-table>`,

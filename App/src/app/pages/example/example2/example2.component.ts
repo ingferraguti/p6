@@ -8,9 +8,9 @@ import { ItemService } from '../../../services/item.service';
   styleUrls: ['./example2.component.css']
 })
 export class Example2Component implements OnInit {
-  list: Item[];
+  //list: Item[];
   search: any = {};
-  idSelected: string;
+  //idSelected: string;
   constructor(
       private itemService: ItemService,
   ) { }
@@ -19,22 +19,7 @@ export class Example2Component implements OnInit {
    * Init
    */
   ngOnInit(): void {
-      this.itemService.list().subscribe(list => this.list = list);
+      this.itemService.getAll()
   }
 
-  /**
-   * Select Item to remove
-   *
-   * @param {string} id Id of the Item to remove
-   */
-  selectId(id: string) {
-      this.idSelected = id;
-  }
-
-  /**
-   * Remove selected Item
-   */
-  deleteItem() {
-      this.itemService.remove(this.idSelected).subscribe(data => this.list = this.list.filter(el => el._id !== this.idSelected));
-  }
 }
