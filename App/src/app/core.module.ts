@@ -19,17 +19,22 @@ import { AuthInterceptor } from './security/auth.interceptor';
 import { GuiModule } from './gui/gui.module';
 
 
+
+
+
 @NgModule({
   declarations: [],
   providers: [
-    /* START PROVIDERS */
+    /* START SERVICE PROVIDERS */
     BlockService,
     BlockTypeService,
     ItemService,
     ItemTypeService,
     RoleService,
     UserService,
-    /* END PROVIDERS */
+    /* END SERVICE PROVIDERS */
+
+   
 
     // SECURITY
     AuthGuard,

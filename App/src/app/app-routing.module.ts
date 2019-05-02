@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'  },
   { path: 'home',  loadChildren: './pages/home/home.module#HomeModule' , canActivate: [AuthGuard] },
 
+  { path: 'example',  loadChildren: './pages/example/example.module#ExampleModule' , canActivate: [AuthGuard] },
    // SECURITY
    { path: 'manage-users',  loadChildren: './security/manage-user/list-user/manage-user-list.module#ManageUserListModule', canActivate: [AuthGuard], data: ['ADMIN']},
    { path: 'manage-users/:id',  loadChildren: './security/manage-user/edit-user/manage-user-edit.module#ManageUserEditModule', canActivate: [AuthGuard], data: ['ADMIN']},

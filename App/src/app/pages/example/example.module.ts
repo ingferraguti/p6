@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
-import { HomeRoutingModule } from './home-routing.module';
+import { ExampleComponent } from './example.component';
+import { ExampleRoutingModule } from './example-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { GuiModule } from '../../gui/gui.module';
 
 import { ItemService } from '../../services/item.service';
+//import { ItemListDelete } from '../../business/item-list-delete';
 import { BusinessModule } from '../../business/business.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    ExampleRoutingModule,
     FormsModule,
     SharedModule,
     GuiModule,
     BusinessModule
   ],
   declarations: [
-    HomeComponent
+    ExampleComponent
   ],
   providers: [ 
     
@@ -27,4 +28,4 @@ import { BusinessModule } from '../../business/business.module';
    
   ]
 })
-export class HomeModule { }
+export class ExampleModule { }

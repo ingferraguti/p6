@@ -2,11 +2,13 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 
+
+
 //Import GUI component ????
 
 
 // Import Services
-
+import { ItemService } from '../../services/item.service';
 
 
 /**
@@ -19,16 +21,29 @@ import { Location } from '@angular/common';
 })
 export class HomeComponent {
 
-    constructor(
-        private location: Location
-        ) {
 
+
+    constructor(
+        private location: Location,
+        private item: ItemService
+        ) {
+       //
     }
 
-
+    
 
 
     //EXAMPLE
+
+
+    
+    headingexample2=[];//mi serve il type per avere le colonne
+    
+    
+    
+    
+    //exampletabledata2= this.itemRD.list;
+
     headingexample=["col1","col2","col3","col4"];
 
     exampletabledata=[
