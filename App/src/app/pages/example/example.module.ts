@@ -9,6 +9,8 @@ import { GuiModule } from '../../gui/gui.module';
 import { ItemService } from '../../services/item.service';
 //import { ItemListDelete } from '../../business/item-list-delete';
 import { BusinessModule } from '../../business/business.module';
+import { Example2Component } from './example2/example2.component';
+import { Example3Component } from './example3/example3.component';
 
 @NgModule({
   imports: [
@@ -20,7 +22,9 @@ import { BusinessModule } from '../../business/business.module';
     BusinessModule
   ],
   declarations: [
-    ExampleComponent
+    ExampleComponent,
+    Example2Component,
+    Example3Component
   ],
   providers: [ 
     
